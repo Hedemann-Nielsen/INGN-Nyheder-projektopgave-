@@ -2,6 +2,9 @@
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
+		// screens: {
+		// 	laptop: "1024",
+		// },
 		extend: {
 			colors: {
 				primary: "#F6F3F3",
