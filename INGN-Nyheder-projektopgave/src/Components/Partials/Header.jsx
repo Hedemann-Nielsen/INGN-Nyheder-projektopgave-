@@ -2,6 +2,7 @@ import { useGetQuery } from "../Hooks/useGetQuery";
 import { getAllHeaders } from "../Queryes/GetAllHeader";
 import { NavLink } from "react-router-dom";
 import "../../Global.css";
+import { FaUser } from "react-icons/fa";
 
 export const Header = () => {
 	const { data, isLoading, error } = useGetQuery(getAllHeaders, "allHeaders");
@@ -20,22 +21,26 @@ export const Header = () => {
 
 	return (
 		<>
-			<div className="px-[100px] border-b-1 shadow-lg">
-				<div className="mx-auto flex justify-between items-center border border-black h-[77px]">
+			<div className="px-[100px] z-10 shadow-lg">
+				<div className="mx-auto flex justify-between items-center h-[77px]">
 					<h1 className="title font-normal text-[#C52525] text-[48px] ">
 						{headers.title.title}
 					</h1>
-					<nav>
-						<ul className="flex space-x-4">
+					<nav className="text-2xl ">
+						<ul className="flex">
+							<span className="px-3">|</span>
+
 							{headers.navigations.map((navigation, index) => (
 								<li key={index}>
 									<NavLink to={navigation.navigationLink}>
 										{navigation.navigationTitle}
+										<span className="px-3">|</span>
 									</NavLink>
 								</li>
 							))}
 						</ul>
 					</nav>
+					<FaUser className="text-red" />
 				</div>
 			</div>
 		</>

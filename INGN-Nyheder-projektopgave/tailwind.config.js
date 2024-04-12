@@ -3,13 +3,14 @@ export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			colors: {
+				primary: "#F6F3F3",
+				secondary: "#FFFFFF",
+				black: "#000000",
+				red: "#C52525",
+			},
 			fontFamily: {
 				Roboto: ["Roboto Flex", "sans-serif"],
-			},
-			colur: {
-				primary: "#000000",
-				secondary: "#000000",
-				tertiary: "#000000",
 			},
 		},
 	},

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { PageWrapper } from "./Components/Wrappers/PageWrappr";
+import { SiteWrapper } from "./Components/Wrappers/SiteWrapper";
 import { Header } from "./Components/Partials/Header";
 import { Footer } from "./Components/Partials/Footer";
 import { Home } from "./Pages/Home";
@@ -12,12 +13,14 @@ function App() {
 			<Router>
 				<PageWrapper>
 					<Header />
-					<Routes>
-						<Route index element={<Home />} />
-						<Route path="/Home" element={<Home />} />
-						<Route path="/details/:id" element={<ArticleDetails />} />
-						<Route path="*" element={<Home />} />
-					</Routes>
+					<SiteWrapper>
+						<Routes>
+							<Route index element={<Home />} />
+							<Route path="/Home" element={<Home />} />
+							<Route path="/details/:id" element={<ArticleDetails />} />
+							<Route path="*" element={<Home />} />
+						</Routes>
+					</SiteWrapper>
 				</PageWrapper>
 				<Footer />
 			</Router>
