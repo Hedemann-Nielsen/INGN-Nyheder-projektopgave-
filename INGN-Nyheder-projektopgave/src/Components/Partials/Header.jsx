@@ -1,11 +1,14 @@
 import { useGetQuery } from "../Hooks/useGetQuery";
-import { getAllHeaders } from "../Queryes/GetAllHeader";
+import { GetAllHeaderContent } from "../Queryes/GetAllHeaderContent";
 import { NavLink } from "react-router-dom";
 import "../../Global.css";
 import { FaUser } from "react-icons/fa";
 
 export const Header = () => {
-	const { data, isLoading, error } = useGetQuery(getAllHeaders, "allHeaders");
+	const { data, isLoading, error } = useGetQuery(
+		GetAllHeaderContent,
+		"allHeaderContent"
+	);
 
 	if (isLoading) {
 		return <span>Loading....</span>;
@@ -17,7 +20,7 @@ export const Header = () => {
 
 	const headers = data.headers[0];
 
-	console.log(headers);
+	// console.log(headers);
 
 	return (
 		<>

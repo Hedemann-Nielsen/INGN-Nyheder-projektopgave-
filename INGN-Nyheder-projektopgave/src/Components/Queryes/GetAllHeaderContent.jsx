@@ -1,6 +1,6 @@
 import { gql } from "graphql-request";
 
-export const getAllHeaders = gql`
+export const GetAllHeaderContent = gql`
 	query Header {
 		headers {
 			title {
