@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useGetQuery } from "../Hooks/useGetQuery";
+import { Link } from "react-router-dom";
 import { GetAllHeaderContent } from "../Queryes/GetAllHeaderContent";
 import "../../Global.css";
 import { FaUser } from "react-icons/fa";
@@ -17,10 +18,10 @@ export const Header = () => {
 
 	useEffect(() => {
 		const handleResize = () => {
-			setIsMobileView(window.innerWidth < 768);
+			setIsMobileView(window.innerWidth < 1024);
 		};
 
-		handleResize(); // Check initial size
+		handleResize();
 		window.addEventListener("resize", handleResize);
 
 		return () => {
@@ -40,11 +41,13 @@ export const Header = () => {
 
 	return (
 		<>
-			<div className="px-[100px] z-10 shadow-lg">
-				<div className="mx-auto flex  md:justify-between sm:justify-between items-center h-[77px]">
-					<h1 className="title font-normal text-[#C52525] text-[48px] ">
-						{headers.title.title}
-					</h1>
+			<div className=" px-1 md:px-[100px] z-10 shadow-lg">
+				<div className="mx-auto flex justify-between items-center h-[77px]">
+					<Link to="/">
+						<h1 className="title font-normal text-[#C52525] text-[48px] ">
+							{headers.title.title}
+						</h1>
+					</Link>
 					{!isMobileView && (
 						<>
 							<DesktopNavigation />

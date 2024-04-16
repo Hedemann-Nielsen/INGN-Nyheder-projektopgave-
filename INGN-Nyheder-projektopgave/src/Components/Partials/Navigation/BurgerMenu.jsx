@@ -27,9 +27,9 @@ export const BurgerMenu = () => {
 	const headers = data.headers[0];
 
 	return (
-		<div className="">
+		<div>
 			<button
-				className="text-2xl  h-[77px]"
+				className="text-2xl h-[77px]"
 				onClick={toggleMenu}
 				aria-label="Toggle Menu">
 				<GiHamburgerMenu />
@@ -41,7 +41,7 @@ export const BurgerMenu = () => {
 							<li key={index}>
 								<NavLink
 									to={navigation.navigationLink}
-									className="block px-4 py-2 hover:bg-gray-100"
+									className="block w-screen text-center px-4 py-2 hover:bg-gray-100"
 									onClick={toggleMenu}>
 									{navigation.navigationTitle}
 								</NavLink>

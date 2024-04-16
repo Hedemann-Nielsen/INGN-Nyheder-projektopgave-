@@ -10,6 +10,7 @@ export default {
 				primary: "#F6F3F3",
 				secondary: "#FFFFFF",
 				black: "#000000",
+				text: "#242424",
 				red: "#C52525",
 			},
 			fontFamily: {

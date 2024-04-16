@@ -17,7 +17,6 @@ export const Footer = () => {
 	}
 
 	const footer = data.footers[0];
-	console.log(footer);
 
 	return (
 		<footer className=" grid grid-cols-4 bg-secudary h-[268px] px-[100px] py-[52px] text-base">
