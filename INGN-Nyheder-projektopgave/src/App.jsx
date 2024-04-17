@@ -16,7 +16,8 @@ function App() {
 					<SiteWrapper>
 						<Routes>
 							<Route index element={<Home />} />
-							<Route path="/details/:id" element={<ArticleDetails />} />
+							<Route path="/" element={<Home />} />
+							<Route path="/articledetails/:id" element={<ArticleDetails />} />
 							<Route path="*" element={<Home />} />
 						</Routes>
 					</SiteWrapper>

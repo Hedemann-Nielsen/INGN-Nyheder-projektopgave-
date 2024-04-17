@@ -19,7 +19,7 @@ export const Footer = () => {
 	const footer = data.footers[0];
 
 	return (
-		<footer className=" grid grid-cols-4 bg-secudary h-[268px] px-[100px] py-[52px] text-base">
+		<footer className=" grid grid-cols-1 md:grid-cols-4 bg-secudary h-[268px] px-[100px] py-[52px] text-base">
 			<div>
 				<h3 className=" pb-6">Adresse</h3>
 				<p>{footer.address.companyName}</p>
